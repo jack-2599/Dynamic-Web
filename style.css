@@ -1,16 +1,47 @@
 /*global*/
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  width: 60%;
+  margin: auto;
+  background-color: #ffffff;
+}
 
 .html {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: red;
+
+  font-weight: 400;
+  scroll-behavior: smooth;
 }
 
+.h1 {
+  font-size: 60px;
+}
+
+.h2 {
+  font-size: 45px;
+}
+
+.h3 {
+  font-size: 25px;
+}
 /*nav*/
 
 .nav {
   display: flex;
   align-items: center;
   height: 100px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
 }
 
 .home,
@@ -38,8 +69,72 @@
 .home a {
   color: #000000;
   text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
 }
 
 .home img {
   margin-right: 10px;
+}
+
+.banner {
+  background-image: url(img/pexels-tembela-bohle-1884584.jpg.crdownload);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 550px;
+  width: 550px;
+  margin: 0;
+  padding: 0;
+  color: #000000;
+  text-align: center;
+  text-decoration: none;
+}
+.banner h1 {
+  padding: 3, 5em 0 0 0;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 100;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 10px 8px;
+  grid-template-areas:
+    "Main Main1 Main2 Main3"
+    "Footer Footer1 Footer2 Footer3";
+}
+
+.Main {
+  grid-area: Main;
+}
+
+.Main1 {
+  grid-area: Main1;
+}
+
+.Main2 {
+  grid-area: Main2;
+}
+
+.Main3 {
+  grid-area: Main3;
+}
+
+.Footer {
+  grid-area: Footer;
+}
+
+.Footer1 {
+  grid-area: Footer1;
+}
+
+.Footer2 {
+  grid-area: Footer2;
+}
+
+.Footer3 {
+  grid-area: Footer3;
 }
