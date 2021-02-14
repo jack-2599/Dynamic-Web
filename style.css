@@ -12,7 +12,7 @@
 body {
   width: 60%;
   margin: auto;
-  background-color: #ffffff;
+  background-color: #dddddd;
 }
 
 .html {
@@ -22,17 +22,6 @@ body {
   scroll-behavior: smooth;
 }
 
-.h1 {
-  font-size: 60px;
-}
-
-.h2 {
-  font-size: 45px;
-}
-
-.h3 {
-  font-size: 25px;
-}
 /*nav*/
 
 .nav {
@@ -83,8 +72,8 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 550px;
-  width: 550px;
+  height: 650px;
+  width: 890px;
   margin: 0;
   padding: 0;
   color: #000000;
@@ -94,47 +83,39 @@ body {
 .banner h1 {
   padding: 3, 5em 0 0 0;
   margin: 0;
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 100;
 }
-.grid-container {
+
+.banner a {
+  text-decoration: none;
+}
+/*.main .productList {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  gap: 10px 8px;
-  grid-template-areas:
-    "Main Main1 Main2 Main3"
-    "Footer Footer1 Footer2 Footer3";
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}*/
+
+.main .productList {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 2px;
+  grid-row-gap: 1px;
 }
 
-.Main {
-  grid-area: Main;
+.article smallProduct {
+  grid-row: 2fr;
 }
 
-.Main1 {
-  grid-area: Main1;
+.productList article.soldOut img {
+  opacity: 0.5;
 }
 
-.Main2 {
-  grid-area: Main2;
+.productList article.soldOut ::before {
+  content: "Sold Out";
 }
 
-.Main3 {
-  grid-area: Main3;
-}
-
-.Footer {
-  grid-area: Footer;
-}
-
-.Footer1 {
-  grid-area: Footer1;
-}
-
-.Footer2 {
-  grid-area: Footer2;
-}
-
-.Footer3 {
-  grid-area: Footer3;
+.productList article .discounted,
+.productList article.onSale .discounted {
+  display: none;
 }
